@@ -41,8 +41,8 @@
 
                    <!--AFFICHAGE du tableau -->
         <?php 
-                $nm = $_POST['name'];
-                 $ag = $_POST['age'];
+                $nm = $_REQUEST['name'];
+                 $ag = $_REQUEST['age'];
                   $c = 'style="color: #FFFFFF"';
                    $aln = 'align="center"';
 

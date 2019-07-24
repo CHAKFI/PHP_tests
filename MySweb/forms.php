@@ -7,6 +7,8 @@
 
    <body align = "center" style="background-image:url('bg_img4.jpg')">
 
+        
+
           <!--Créer un formulaire-->
         </br></br></br></br></br></br></br></br></br></br>
         <form  method="post" <?php require'empty.php'; ?> >
@@ -30,18 +32,7 @@
                    © 2019 EST Sidi Bennour | Created by: <strong>CHAKFI Ahmed</strong>
 
                  </div>
-   <?php
-       if ($_SERVER["REQUEST_METHOD"] == "POST")
-           {
-           	 $nm = $_POST['name'];
-           	  $ag = $_POST['age'];
-           	   $c = 'style="color: #FFFFFF"';
-                $aln = 'align="center"';
-
-                 return $nm;
-                 return $ag;
-           }
-    ?>
+  
                      
 
 	</body>
