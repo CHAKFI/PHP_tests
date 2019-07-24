@@ -10,14 +10,14 @@
                      //define a class PERSON who content information of a person 
                  class Person
                  {
-                   $fname;
-                    $lname;
-                     $age;
+                   private $fname;
+                   private $lname;
+                   private $age;
 
-                  public : 
-                    Person();         //default constructor 
-                    Person($, $, $);    //initialization constructor
-                    Person(& );     //copy constructor
+                   
+                    public Person();         //default constructor 
+                    public Person($, $, $);    //initialization constructor
+                    public Person(& );     //copy constructor
                  }
                      //definition of default constructor
                       Person::Person()
