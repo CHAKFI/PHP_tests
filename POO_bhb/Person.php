@@ -62,7 +62,7 @@
 		
 		</form>
                     
-                                        <?php
+              <?php
                      //define a class PERSON who content information of a person 
                  class Person
                  {
@@ -108,11 +108,21 @@
                              </table>";
 
                                   // vérifier si les champs sont vides et aficher le tableau 
-         if ($_SERVER["REQUEST_METHOD"] == "POST")
-            {
-            	
-            }        
+                       if ($_SERVER["REQUEST_METHOD"] == "POST")
+                        {
+								  if (empty($_POST['fname'])) {
+								    echo"First name is required";
+								  } 
 
+								  if (empty($_POST['lname'])) {
+								    echo"Last name is required";
+								  } 
+
+								  if (empty($_POST["website"])) {
+								    echo"Age is required";
+								  } 
+                        }        
+             
                  ?>
               
                 <div align="below" style="background-color: #BABABA; margin-top: 200px; height: 20px;">
