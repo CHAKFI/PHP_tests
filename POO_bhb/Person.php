@@ -5,7 +5,8 @@
 				<title>~~PERSON INFORMAION~~</title>
 			</head>
 			<style>
-  
+       
+       <!--DEFINE TABLE-->
     table
      {
       font-family: arial, sans-serif;
@@ -37,7 +38,7 @@
                      </p>
                    </h1>
 
-                   <!--AFFICHAGE du tableau -->
+                   <!--CREATE FORM -->
  
 			<body align = "center" style="background-image:url('bg_img4.jpg')">
      
@@ -77,15 +78,20 @@
                       }
                       
                         }
-
+                           // Create an instance of class Person
                     $obj = new Person();
+
+                          //VRBL
                     $fnm = $_REQUEST['Fname'];
                     $lnm = $_REQUEST['Lname'];
                     $ag = $_REQUEST['age'];
                     $c = 'style="color: #FFFFFF"';
                     $aln = 'align="center"';
-                    
+                         
+                         //calling  inisialization constructor
                     $obj->__Person($fnm,$lnm,$ag);
+                         
+                         //Show table
                        echo"</br></br></br></br></br></br>";
                        echo" <table ".$aln.">
                               <tr>
@@ -100,7 +106,14 @@
                                 <td ".$c.">".$ag."</td> 
                               </tr>
                              </table>";
-         ?>
+
+                                  // vérifier si les champs sont vides et aficher le tableau 
+         if ($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+            	
+            }        
+
+                 ?>
               
                 <div align="below" style="background-color: #BABABA; margin-top: 200px; height: 20px;">
 
