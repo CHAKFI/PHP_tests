@@ -13,35 +13,34 @@
                    private $fname;
                    private $lname;
                    private $age;
+                              
 
-                   
-                    public Person();         //default constructor 
-                    public Person($, $, $);    //initialization constructor
-                    public Person(& );     //copy constructor
-                 }
-                     //definition of default constructor
-                      Person::Person()
+                    /*          //default constructor
+                    public function __Person()
                       {
-                       echo "\r\nWELCOME TO DEFAULT CONSTRUCTOR\r\n";
-                      }
+                       echo"\r\nWELCOME TO DEFAULT CONSTRUCTOR\r\n";
+                      }  
+                    */
 
-                     //definition of initialization constructor
-                      Person::Person($a, $b, $c)
+                              //initialization constructor
+                    public function __Person($a, $b, $c)
                       {
                       	echo "\r\nWELCOME TO INITIALIZATION CONSTRUCTOR\r\n";
                          $fname = $a;
                           $lname = $b;
                        	   $age = $c;
                       }
-
-                     //definition of copy constructor 
-                      Person::Person( &$ob)
+                       
+                         /*
+                               //copy constructor
+                    public function __Person( &$ob)
                       {
-                       echo "\r\nWELCOME TO COPY CONSTRUCTOR\r\n";
-                        
-                      }
 
-               ?>        
+                       echo "\r\nWELCOME TO COPY CONSTRUCTOR\r\n";
+                      }     
+                      */
+                        }
+                         ?>        
 
 			</body>
 			</html>
