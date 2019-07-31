@@ -18,7 +18,16 @@
 		    die("Connection failed: " . mysqli_connect_error());
 		}
 		echo "Connected successfully";
+        
+        //create database
+        $sql = "CREATE DATABASE";
+          
+
+
+
 		?>
+
+
 
 		</body>
 </html>
