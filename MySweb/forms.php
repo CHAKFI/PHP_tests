@@ -5,7 +5,7 @@
 	<title>MySweb</title>
   </head>
 
-   <body align = "center" style="background-image:url('bg_img4.jpg')">
+   <body align = "center" style="background-image:url('bg_img4.jpg'); background-size:cover; ">
 
         
 

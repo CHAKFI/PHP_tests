@@ -18,20 +18,23 @@
 				   {
 				    die("Connection failed: " . mysqli_connect_error());
 				   }
-				    echo "Connection successfully\r\n";
-
+				    echo "\r\nConnection successfully\r\n";
+                  
+                
 				
                     // using database
 				   $usingDB = "USE person;";
 				if (mysqli_query($conn,$usingDB))
 				   {
-                    echo"Database changed and can be used";
+                    echo"\r\nDatabase changed and can be used\r\n";
 				   }
 				else
 				   {
 				   	echo "\r\nCan't using database : ".mysqli_error($conn)."\r\n";
 				   }   
 
+				   if(mysqli_close($conn)) echo "connection has been closed";
+                   
 
 		    ?>
 

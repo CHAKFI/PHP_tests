@@ -1,0 +1,35 @@
+
+	#frm
+	{
+     width: 30%;
+     border-radius: 20px;
+     margin: 100px auto;
+     background: rgba(254, 254, 254, 0.2);;
+     padding: 5px;
+	}
+
+	#title
+	{
+	 font-family: 'Century Gothic','Futura',san-serif;		
+	}
+    
+    #btn
+    {
+	 color: #fff;
+	 background: #000066;
+	 border-radius: 15px;
+	 width: 50%;
+	 padding: 5px;
+	 margin-left: 25%; 
+	}
+     
+    #txt1,#txt2
+    {
+	 font-family: 'Century Gothic','Futura',san-serif;
+	 font-size: 20px;
+    }
+
+    #user,#pass
+    {
+     border-radius: 15px;
+    }

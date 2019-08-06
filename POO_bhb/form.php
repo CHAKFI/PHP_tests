@@ -73,7 +73,7 @@
 
                ?>
             
-      <body align = "center" style="background-image:url('formIMG/bg_img4.jpg')">
+      <body align = "center" style="background-image:url('formIMG/bg_img4.jpg');background-size:cover;">
 
             <h2>~~INFORMATION~~</h2>
             <p style="font-size:25px;"><span class="error">(*): mean required </span></p>
