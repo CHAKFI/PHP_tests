@@ -5,6 +5,7 @@
      margin: 100px auto;
      background: rgba(254, 254, 254, 0.2);;
      padding: 5px;
+     border-radius: 15px;
 	}
 
 	#title
@@ -15,6 +16,7 @@
      margin-right: 15px; 
      background: rgba(14, 1, 196, 0.2);;
      padding: 1px;
+     border-radius: 15px;
 	}
     
     #btn
@@ -37,3 +39,5 @@
     {
      border-radius: 7px;
     }
+
+  
