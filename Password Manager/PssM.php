@@ -10,7 +10,7 @@
 		  
 		   
 		  <div id="frm">
-		  	    <H1 id="title">Login</H1>
+		  	  <div id="title"><H1>Login</H1></div>
 		  	<p>
 		  		<label id="txt1">UserName: </label>	
 		  		<input style="font-size:20px;" type="text" id="user" name="user" />
@@ -20,7 +20,7 @@
 		  		<input style="font-size:20px;" type="text" id="pass" name="pass" />
 		  	</p>
 		  	<p>
-		  		<input style="font-size:15px;" type="submit" id="btn" value="L O G I N" />
+		  		<input style="font-size:15px;" type="submit" id="btn" value="L O G I N"  />
 		  	</p>
 		 
 		  </div>
