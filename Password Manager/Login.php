@@ -17,11 +17,11 @@
 		  	<form action="process.php" method="POST">  
 			  	<p>
 			  		<label id="txt1">UserName: </label>	
-			  		<input style="font-size:20px;" type="text" id="user" name="user" />
+			  		<input style="font-size:20px;" type="text" name="user" />
 			  	</p>
 			  	<p>
 			  		<label style="margin-left: 2.5%;" id="txt2">Password: </label>	
-			  		<input style="font-size:20px;" type="text" id="pass" name="pass" />
+			  		<input style="font-size:20px;" type="password" name="pass" />
 			  	</p>
 			  	<p>
 			  		<input style="font-size:15px;" type="submit" id="btn" value="L O G I N"  />

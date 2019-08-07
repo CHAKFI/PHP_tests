@@ -11,7 +11,7 @@
 				$password = "root";
 
 				// Create connection
-				$conn = mysqli_connect($servername, $username, );
+				$conn = mysqli_connect($servername, $username,);
 
 				// Check connection
 				if (!$conn)
