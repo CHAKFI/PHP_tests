@@ -34,7 +34,7 @@
 					 $username = stripcslashes($username);
 					  $password = stripcslashes($password);
 					   $username = mysqli_real_escape_string($con, $username);
-						$password = mysqli_real_escape_string($con, $username);
+						$password = mysqli_real_escape_string($con, $password);
 						
 		 // Query the database for user
 
@@ -44,7 +44,12 @@
 					
 				      if ( $row['username'] == $username && $row['pssw'] == $password )
 					      {
-					    echo '<p style="font-family: Century Gothic; font-size: 30px; margin-left: 40%; color: white; width: 30%; background: rgba(1, 254, 18, 0.2); padding: 1px; border-radius: 15px;" login success! Welcome'.$row['username'].'</p>';
+					    echo '<p style="font-family: Century Gothic; font-size: 30px; margin-left: 25%; color: white; width: 50%; background: rgba(1, 254, 18, 0.2); padding: 1px; border-radius: 15px;"> login success! Welcome '.$row['username'].'</p>';
+					    echo '<div style="margin-top: 38%;">
+					              <a href="login.php" style="font-size: 30px; font-family: Century Gothic; color:white;"> Sign out
+					              </a>
+					           </div>';
+
 		        	      } 
 
 		        	  else 
@@ -52,7 +57,7 @@
 				        echo '<p style="font-family: Century  Gothic; font-size: 30px; margin-left: 36%; color:white; width: 30%; background: rgba(254, 1, 1, 0.2); padding: 1px; border-radius: 15px;">Failed to login!<a href="login.php" style="font-family: Century Gothic; color:white;"> Try again</a></p>';
 		                  }
                            
-                       
+                      
 
 
 		?>               
