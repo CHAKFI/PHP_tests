@@ -4,12 +4,14 @@
      <head>
 		    <link rel="icon" type="image/png" href="img/icon.png">
 			<title>~ Acceuil ~</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
 	 </head>
 		
 		<body align="center" style="background-image:url('img/8.jpg'); background-size: cover;">
 		  <?php 
-		 
-		 // to get values passe from form in login.php file
+
+              include"process-style.php";
+      		 // to get values passe from form in login.php file
 		     
 		     if(isset($_POST['user']))
 		       {
@@ -44,9 +46,14 @@
 					
 				      if ( $row['username'] == $username && $row['pssw'] == $password )
 					      {
-					    echo '<p style="font-family: Century Gothic; font-size: 30px; margin-left: 25%; color: white; width: 50%; background: rgba(1, 254, 18, 0.2); padding: 1px; border-radius: 15px;"> login success! Welcome '.$row['username'].'</p>';
+					    echo '<p style="font-family: Century Gothic; font-size: 30px; margin-left: 25%; color: white; width: 50%; background: rgba(1, 254, 18, 0.2); padding: 1px; border-radius: 15px;"> Login Success! Welcome '.$row['username'].'</p>';
 					    echo '<div style="margin-top: 38%;">
-					              <a href="login.php" style="font-size: 30px; font-family: Century Gothic; color:white;"> Sign out
+					              <a href="login.php">
+					                <button class="button">
+					                 <span>
+					                  Sign Out
+					                 </span>
+					                </button>
 					              </a>
 					           </div>';
 
