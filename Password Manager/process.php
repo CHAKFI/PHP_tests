@@ -7,7 +7,14 @@
             <link rel="stylesheet" type="text/css" href="style.css">
 	 </head>
 		
-		<body align="center" style="background-image:url('img/8.jpg'); background-size: cover;">
+		<body align="center" >
+		     <!-- background Animation -->
+             <?php include'styleStars.php'; ?>
+
+	          <div id="stars"></div>
+	          <div id="stars2"></div>
+	          <div id="stars3"></div>
+
 		  <?php 
 
               include"process-style.php";
@@ -47,7 +54,7 @@
 				      if ( $row['username'] == $username && $row['pssw'] == $password )
 					      {
 					    echo '<p style="font-family: Century Gothic; font-size: 30px; margin-left: 25%; color: white; width: 50%; background: rgba(1, 254, 18, 0.2); padding: 1px; border-radius: 15px;"> Login Success! Welcome '.$row['username'].'</p>';
-					    echo '<div style="margin-top: 38%;">
+					    echo '<div style="margin-top: 36%;">
 					              <a href="login.php">
 					                <button class="button">
 					                 <span>
