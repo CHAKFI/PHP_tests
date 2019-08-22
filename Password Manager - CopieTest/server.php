@@ -44,7 +44,6 @@
 			$_SESSION['user'] = $username;
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
-			$password = md5($password_1);
 		}
 
 	}
@@ -67,7 +66,6 @@
 			
 			$query = "SELECT * FROM authentf WHERE username='$username' AND pssw='$password'";
 			$results = mysqli_query($con, $query);
-            $password = md5($password);
             
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['user'] = $username;

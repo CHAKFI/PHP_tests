@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <?php 
 	session_start(); 
 
@@ -11,15 +12,17 @@
 		unset($_SESSION['username']);
 		header("location: login.php");
 	}
-
+  echo $password;
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body style="background: url(img/11.jpg)">
+        
+
+
 	<div class="header">
 		<h2>Home Page</h2>
 	</div>
