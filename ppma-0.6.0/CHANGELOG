@@ -1,0 +1,129 @@
+PHP Password Manager (ppma) Change Log
+======================================
+
+Version 0.6.0
+-------------
+- Issue #70: Added import for PhpPasswordManager
+- Issue #68: Simplified code of setup routine
+- Issue #56: Added `returnUrl`-param to `entry/update` and `tag/update`
+- Issue #52: Entry name on `entry/index` is a link now
+- Issue #51: Added default order for `entry/index` and `tag/index`
+- Issue #47: Added copy actions to `entry/index`
+- Issue #46: Added support for alternate database host port
+- Issue #36: Added `remember me` functionallity
+- Issue #22: Added double check password when create admin user
+- Bug: CSV-Export has no `csv`-extension
+- Bug: CSV-Import doesn't work with PHP7
+- Bug: Import: Remove entries before saving doesn't work
+
+Version 0.5.2
+-------------
+- Bug #60: Moved DEBUG constants to the top of the `index.php`
+- Bug #66: Removed deprecated `mysql_connect()` function
+- Enh: Added `bower` and `grunt-cli` to `package.json` as local dependency
+
+Version 0.5.1
+-------------
+- Bug #44: Can't delete entries or TAGs
+- Bug: Fixed building process for creating release packages
+
+Version 0.5.0
+-------------
+- Bug #40: 400 error when deleting tag
+- Enh: added form that will be shown if the user tried to delete an entry per GET-request
+- Enh: removed short array syntax
+
+Version 0.4.2
+-------------
+- Bug #30: Search results pagination goes to main password list instead
+- Bug #31: CSV import limited to 167 entries: Added hint to import
+- Bug #32: Tags don't get imported from CSV
+- Bug #33: Updated zeroclipboard to version 2.1.6
+- Bug #35: Error code 400 on delete request
+
+Version 0.4.1
+-------------
+- Bug #29: Tags overview is locked to 10 entries, regardless of "Results per page" setting
+
+Version 0.4.0
+-------------
+- Enh: Added a "Results per page"-dropdown to `entry/index` and `tag/index`
+- Chg: Upgraded Yii to version 1.1.15
+
+Version 0.3.10
+--------------
+- Enh #24: Added "copy to clipboard" function. Thanks to [crossgate9](https://github.com/crossgate9)
+- Enh #27: Improved requirement check in setup routine. Thanks to [IntiGabriel](https://github.com/IntiGabriel)
+- Enh: Improved upgrade routine
+
+Version 0.3.9
+-------------
+- Bug: #19: When creating new passwords with tags they don't get added
+
+Version 0.3.8
+-------------
+- Bug: #18: Upgrade from 0.3.5.1 to 0.3.7 required two upgrade passes to complete
+- Enh: Improved upgrade routine
+
+Version 0.3.7
+-------------
+- Bug: #14: Safari doesn't let you view password
+- Enh: #14: Added `autocomplete="off"` to entry form
+- Enh: Added `require` attribute to entry form
+- Enh: Added link to main page in navigation
+- Bug: Fixed design of sidebar
+
+Version 0.3.6
+-------------
+- Bug: #14: Tags getting erased
+- Enh: Added placeholder to tag list of Entry-form
+- New: Added Grunt for the building process
+- Chg: Added Yii via Composer
+- Bug: setup.css is linked in the setup routine, but does not exist
+- Enh: Improved setup routine
+
+Version 0.3.5.2
+---------------
+- Bug #9: Improved requirement check in setup routine to prevent "setup loop"
+- New: Added robots.txt
+- Chg: Removed donations file
+- Chg: Removed index-test.php
+- Chg: Upgraded to Yii version 1.1.14
+
+Version 0.3.5
+-------------
+- Chg: Upgraded jQuery UI to version 1.9.2
+- Bug: Quicksearch doesn't work with entries which have no tags
+- New: Added drag-and-drop feature for sidebar
+- New: Added export to CSV
+- New: Added import from CSV
+
+Version 0.3.4
+-------------
+- New #1: Added widget to sidebar that shows the most viewed entries
+- Chg: Upgraded Foundation to version 3.2
+- Enh: Optimized the upgrade routine
+
+Version 0.3.3
+-------------
+- New: Added widget to sidebar that shows the recent entries
+- Chg: Removed unused files
+- Chg: Cleaned up code
+- Bug: #3 can't install, won't create database tables
+
+Version 0.3.2
+-------------
+- New: Added typeahead to search field in the navigation
+- Chg: Removed some usages of non existing JS and CSS files
+
+Version 0.3.1
+-------------
+- Bug: Update-modal on entry/index didn't work
+- Bug: Fresh installations didn't work, because assets/ & protected/runtime/ were missing
+
+Version 0.3.0
+-------------
+- New: Added link to the saved URL of an entry (index.php?r=entries/index)
+- New: Added favicon
+- Chg: Improved design (using foundation)
+- Chg: Removed registration functionality

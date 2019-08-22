@@ -4,20 +4,29 @@
      <head>
 		    <link rel="icon" type="image/png" href="img/icon.png">
 			<title>~ Acceuil ~</title>
-            <link rel="stylesheet" type="text/css" href="style.css">
 	 </head>
 		
-		<body align="center" >
-		     <!-- background Animation -->
-             <?php include'styleStars.php'; ?>
+		<body align="center" style="background-image: url('img/11.jpg'); background-size: cover;">
 
-	          <div id="stars"></div>
-	          <div id="stars2"></div>
-	          <div id="stars3"></div>
+			      <?php 
+                   include"css/process-style.php"; 
+                   ?>
+
+			<div id="brr">
+				<p style="margin-left: 470px;"><strong>PassWord Manager</strong>					      
+				    <a href="login.php">
+		                <button style="margin-left: 400px;" class="butt">
+		                 <span>
+		                  Sign Out
+		                 </span>
+		                </button>
+		              </a>
+		              </p>
+		    </div>
 
 		  <?php 
 
-              include"process-style.php";
+              
       		 // to get values passe from form in login.php file
 		     
 		     if(isset($_POST['user']))
@@ -53,27 +62,30 @@
 					
 				      if ( $row['username'] == $username && $row['pssw'] == $password )
 					      {
-					    echo '<p style="font-family: Century Gothic; font-size: 30px; margin-left: 25%; color: white; width: 50%; background: rgba(1, 254, 18, 0.2); padding: 1px; border-radius: 15px;"> Login Success! Welcome '.$row['username'].'</p>';
-					    echo '<div style="margin-top: 36%;">
-					              <a href="login.php">
-					                <button class="button">
-					                 <span>
-					                  Sign Out
-					                 </span>
-					                </button>
-					              </a>
-					           </div>';
-
+					    echo '<p id="txt" > Login Success! Welcome '.$row['username'].'</p>';
 		        	      } 
 
 		        	  else 
 		        	      {
-				        echo '<p style="font-family: Century  Gothic; font-size: 30px; margin-left: 36%; color:white; width: 30%; background: rgba(254, 1, 1, 0.2); padding: 1px; border-radius: 15px;">Failed to login!<a href="login.php" style="font-family: Century Gothic; color:white;"> Try again</a></p>';
+				        echo '</br></br></br></br></br><img src="img/failed.png" height="250" width="450">';
+				        echo '<div id="txt2">Register Now if you are not registered
+				                  <a href="signup.php">
+			                       <button class ="button">
+			                        <span>
+			                         Sign Up
+			                        </span>
+			                       </button>
+			                      </a> 
+			                      Or 
+			                      <a id="lien"href="login.php">
+				                   <button class ="button">
+			                        <span>
+			                         Try Again
+			                        </span>
+			                       </button>
+			                       </div>';
 		                  }
-                           
-                      
-
-
+             
 		?>               
 		</body>
 </html>

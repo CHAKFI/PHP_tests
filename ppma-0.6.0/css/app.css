@@ -1,0 +1,132 @@
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-size: 14px !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+hr {
+    border-color: #eee;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+#upgrade {
+    margin-top: 50px;
+}
+
+#content, #login {
+    -webkit-box-shadow: #eee 0 0 20px;
+    -moz-box-shadow: #eee 0 0 20px;
+    box-shadow: #eee 0 0 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#login {
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.button-column {
+    width: 85px;
+    float: none !important;
+}
+
+#entries .button-column {
+    width: 135px;
+    float: none !important;
+}
+
+.button-column a {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.import-button-column i  {
+    display: block;
+    margin-right: 5px;
+    padding-top: 7px;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}
+
+.button-column .placeholder {
+    float: left;
+    width: 23px;
+    height: 18px;
+}
+
+.button-column a:last-child {
+    margin-right: 0;
+}
+
+.grid-view .summary {
+    padding-bottom: 5px;
+    text-align: right;
+}
+
+.panel {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.panel div.settings {
+    position: relative;
+    top: -25px;
+    left: 156px;
+    width: 16px;
+    cursor: move;
+}
+
+.panel ul {
+    list-style-type: none;
+}
+
+.hint {
+    font-size: 0.9em;
+    color: #AAA;
+    padding-left: 20px;
+    width: 75%;
+}
+
+.true, .false {
+    font-weight: bold;
+}
+
+.true {
+    color: green;
+}
+
+.false {
+    color: red;
+}
+
+.errorSummary  ul {
+    margin-bottom: 0;
+}
+
+aside > div > h5 {
+    margin-bottom: 0;
+}
