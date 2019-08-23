@@ -31,7 +31,7 @@
    <div id="brr">
 				<p style="margin-left: 550px;"><strong>PassWord Manager</strong>					      
 				    <a href="index.php?logout='1'">
-		                <button style="margin-left: 450px;" class="butt">
+		                <button style="margin-left: 440px;" class="butt">
 		                 <span>
 		                  Sign Out
 		                 </span>
@@ -44,7 +44,7 @@
 
 		<!-- notification message "you are now signed in" -->
 		<?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success" >
+			<div>
 				<h3>
 					<?php 
 						echo $_SESSION['success']; 
