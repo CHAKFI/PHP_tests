@@ -44,13 +44,13 @@
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 18px;
+  font-size: 13px;
   padding: 6px;
-  width: 120px;
+  width: 98px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 1px;
-  margin-top: -177px;
+  margin-top: -280px;
 }
 
 .butt span {
@@ -108,10 +108,10 @@
 
 #brr {
   font-family: Century Gothic;
-   font-size: 30px;
+   font-size: 24px;
     background: rgba(10, 0, 60, 0.2);
-     margin-top: -29px;
-      height: 50px;
+     margin-top: -23px;
+      height: 37px;
 }
 
 #mssgIndexWelcm {
