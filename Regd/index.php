@@ -19,14 +19,14 @@
 <head>
 	<title>Home</title>
 </head>
-<body style="background: url(img/11.jpg)">
+<body style="background-image: url('img/11.jpg'); background-size: cover;">
         
 
 
-	<div class="header">
+	<div>
 		<h2>Home Page</h2>
 	</div>
-	<div class="content">
+	<div>
 
 		<!-- notification message -->
 		<?php if (isset($_SESSION['success'])) : ?>

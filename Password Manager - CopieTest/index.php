@@ -19,16 +19,29 @@
 
 	<title>~Accueil~</title>
 	<link rel="icon" type="image/png" href="img/icon.png">
-	<link rel="stylesheet" type="text/css" href="style.css">
-
+	
 </head>
-<body>
-	<div class="header">
-		<h2>Home Page</h2>
-	</div>
-	<div class="content">
+<body style="background-image: url('img/11.jpg'); background-size: cover;">
+             
+                   <?php 
+                   include"css/process-style.php"; 
+                   ?>
+     <!-- Barre : PASSWORD MANAGER -->
+   <div id="brr">
+				<p style="margin-left: 470px;"><strong>PassWord Manager</strong>					      
+				    <a href="index.php?logout='1'">
+		                <button style="margin-left: 400px;" class="butt">
+		                 <span>
+		                  Sign Out
+		                 </span>
+		                </button>
+		              </a>
+		              </p>
+		    </div>
 
-		<!-- notification message -->
+	<div>
+
+		<!-- notification message "you are now signed in" -->
 		<?php if (isset($_SESSION['success'])) : ?>
 			<div class="error success" >
 				<h3>
@@ -42,8 +55,8 @@
 
 		<!-- logged in user information -->
 		<?php  if (isset($_SESSION['user'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['user']; ?></strong></p>
-			<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+			<p id="mssgIndexWelcm"> Welcome <strong id="usr"><?php echo $_SESSION['user']; ?></strong></p>
+			
 		<?php endif ?>
 	</div>
 		

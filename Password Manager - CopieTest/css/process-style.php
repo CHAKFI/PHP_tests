@@ -114,5 +114,14 @@
       height: 50px;
 }
 
+#mssgIndexWelcm {
+  margin-top: -1px;
+  font-family: Century Gothic;
+}
+
+#usr{
+  color: green;
+}
+
 </style>
   

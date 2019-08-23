@@ -70,7 +70,7 @@
             
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['user'] = $username;
-				$_SESSION['success'] = "You are now logged in";
+				$_SESSION['success'] = "You are now signed in";
 				header('location: index.php');
 			}else {
 				echo'<p id="mssg">Wrong username or password</p>';
