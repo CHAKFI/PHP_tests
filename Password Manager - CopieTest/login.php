@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('server.php');?>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -14,6 +14,8 @@
 		   include'css/styleStars.php';
 		   include'css/login_button_Sgout_style.php';
 		   include'css/style.php';
+
+
 		    ?>
 
 	          <div id="stars"></div>

@@ -37,15 +37,15 @@
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
 			//encrypt the password before saving in the database
-			$query = "INSERT INTO authentf (username, email, pssw) 
-					  VALUES('$username', '$email', '$password')";
+			$password = md5($password_1);
+			$query = "INSERT INTO authentf (username, email, pssw) VALUES('$username', '$email', '$password')";
 			mysqli_query($con, $query);
 
 			$_SESSION['user'] = $username;
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
 		}
-
+        
 	}
 
 	// ... 
@@ -63,9 +63,10 @@
 		}
 
 		if (count($errors) == 0) {
-			
+		  	$password = md5($password);
 			$query = "SELECT * FROM authentf WHERE username='$username' AND pssw='$password'";
 			$results = mysqli_query($con, $query);
+            
             
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['user'] = $username;
