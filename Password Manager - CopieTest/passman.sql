@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 22 août 2019 à 21:23
+-- Généré le :  sam. 24 août 2019 à 20:54
 -- Version du serveur :  10.1.39-MariaDB
 -- Version de PHP :  7.3.5
 
@@ -32,7 +32,7 @@ CREATE TABLE `authentf` (
   `id_au` int(11) NOT NULL,
   `username` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `pssw` varchar(15) NOT NULL
+  `pssw` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 --
@@ -63,7 +63,12 @@ CREATE TABLE `password` (
 --
 
 INSERT INTO `password` (`id_p`, `lien`, `username`, `pssw`, `id_au`) VALUES
-(1, 'https://www.facebook.com/', 'BIGBOSS', 'azerty', 1);
+(1, 'https://www.facebook.com/', 'BIGBOSS', 'azerty', 1),
+(2, 'www.instagram.com', 'BIGBOSS', 'azerty', 1),
+(3, 'https://www.github.com/', 'CHAKFI', 'qsdfgh', 3),
+(4, 'https://www.linkedin.com', 'CHAKFI', 'qsdfgh', 3),
+(5, 'https://www.stackoverflow.com', 'CHAKFI', 'qsdfgh', 3),
+(6, 'http://www.estsb.ucd.ac.ma/', 'ESTsb', 'aqwxszedc', 2);
 
 --
 -- Index pour les tables déchargées
@@ -90,13 +95,13 @@ ALTER TABLE `password`
 -- AUTO_INCREMENT pour la table `authentf`
 --
 ALTER TABLE `authentf`
-  MODIFY `id_au` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_au` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `password`
 --
 ALTER TABLE `password`
-  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_p` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Contraintes pour les tables déchargées

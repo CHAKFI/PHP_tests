@@ -11,6 +11,7 @@
               //connect to the server select database
 		  				$con = mysqli_connect($servername, $userSer, $pwdSer);
 						mysqli_select_db($con, $dbname);
+						
 
       		 // REGISTER USER
 		$username = "";
@@ -37,7 +38,7 @@
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
 			//encrypt the password before saving in the database
-			$password = md5($password_1);
+			$password = $password_1;
 			$query = "INSERT INTO authentf (username, email, pssw) VALUES('$username', '$email', '$password')";
 			mysqli_query($con, $query);
 
@@ -63,7 +64,7 @@
 		}
 
 		if (count($errors) == 0) {
-		  	$password = md5($password);
+
 			$query = "SELECT * FROM authentf WHERE username='$username' AND pssw='$password'";
 			$results = mysqli_query($con, $query);
             

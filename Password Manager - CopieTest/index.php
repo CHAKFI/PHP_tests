@@ -11,7 +11,7 @@
 		unset($_SESSION['user']);
 		header("location: login.php");
 	}
-
+             
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,58 +61,54 @@
 		<?php endif ?>
 	</div>
        
-       <div class="table-title">
+        
+        <?php 
 
-<h3>Your Passwords</h3>
+            $servername = "localhost";
+			  $userSer = "root";
+			  $pwdSer = "";
+              $dbname = "passman";
+              $sp = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"; // simple espace
+              //connect to the server select database
+		  				$con = mysqli_connect($servername, $userSer, $pwdSer);
+						mysqli_select_db($con, $dbname);
+              
+              //récupérer le nom utilisateur
+                 $id = $_SESSION['user'];
 
-</div>
+              //requtte sql qui affiche lien user pssw
+                 $query = "SELECT lien, username, pssw FROM password WHERE username = '$id'" ; 
+			     $result = mysqli_query($con, $query);
+			     $num = mysqli_num_rows($result);
 
- <table class="table-fill">
+				mysqli_close ($con);  
 
- <thead>
+				       echo '<div class="table-title">';
+		                echo '<h3>Your Passwords</h3>';
+		                 echo '</div>';
+                          echo '<table class="table-fill">';
+                           echo '<thead>';
+					        echo '<tr>';
+					         echo '<th class="text-left">Username</th>';
+					         echo '<th class="text-left">Lien</th>';
+					         echo '<th class="text-left">Password</th>';
+					        echo '</tr>';
+					       echo '</thead>';
+					       echo '<tbody class="table-hover">';
+                            
+                  while ($rows = mysqli_fetch_array($result)){
+                  	         echo '<tr>';
+                            echo '<td>'.$sp.$rows['username'].'</td>'; 
+                            echo '<td>'.$sp.$rows['lien'].'</td>';
+                            echo '<td>'.$sp.$rows['pssw'].'</td>';
+                             echo '</tr>';
+                             }
+                       
+                       echo '</tbody>';
+                       echo '</table>';
 
-<tr>
-	<th class="text-left">Username</th>
-	<th class="text-left">Lien</th>
-	<th class="text-left">Password</th>	
-</tr>
-
- </thead>
-  <tbody class="table-hover">
-
-<tr>
-	<td class="text-left">azerty</td>
-	<td class="text-left">www.azerty.com</td>
-	<td class="text-left">azerty</td>
-</tr>
-
-<tr>
-	<td class="text-left">user</td>
-	<td class="text-left">www.user.com</td>
-	<td class="text-left">us</td>
-</tr>
-
-<tr>
-	<td class="text-left">qwert</td>
-	<td class="text-left">www.qwert.com</td>
-	<td class="text-left">qwt</td>
-</tr>
-
-<tr>
-	<td class="text-left">admin</td>
-	<td class="text-left">www.admin.com</td>
-	<td class="text-left">adm</td>
-</tr>
-
-<tr>
-	<td class="text-left">virtual</td>
-	<td class="text-left">www.virtual.com</td>
-	<td class="text-left">vrt</td>
-</tr>
-
- </tbody>
-
-  </table>
+ 
+         ?>
 
   <button class="buttADD">
   	<span>
