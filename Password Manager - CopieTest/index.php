@@ -11,7 +11,7 @@
 		unset($_SESSION['user']);
 		header("location: login.php");
 	}
-             
+           
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +31,7 @@
    <div id="brr">
 				<p style="margin-left: 550px;"><strong>PassWord Manager</strong>					      
 				    <a href="index.php?logout='1'">
-		                <button style="margin-left: 440px;" class="butt">
+		                <button style="margin-left: 445px;" class="butt">
 		                 <span>
 		                  Sign Out
 		                 </span>
@@ -77,40 +77,44 @@
                  $id = $_SESSION['user'];
 
               //requtte sql qui affiche lien user pssw
-                 $query = "SELECT lien, username, pssw FROM password WHERE username = '$id'" ; 
+                 $query = "SELECT lien, username, pssw FROM password WHERE username = '$id'"; 
 			     $result = mysqli_query($con, $query);
 			     $num = mysqli_num_rows($result);
 
-				mysqli_close ($con);  
+			
 
-				       echo '<div class="table-title">';
-		                echo '<h3>Your Passwords</h3>';
-		                 echo '</div>';
-                          echo '<table class="table-fill">';
-                           echo '<thead>';
-					        echo '<tr>';
-					         echo '<th class="text-left">Username</th>';
-					         echo '<th class="text-left">Lien</th>';
-					         echo '<th class="text-left">Password</th>';
-					        echo '</tr>';
-					       echo '</thead>';
-					       echo '<tbody class="table-hover">';
-                            
-                  while ($rows = mysqli_fetch_array($result)){
-                  	         echo '<tr>';
-                            echo '<td>'.$sp.$rows['username'].'</td>'; 
-                            echo '<td>'.$sp.$rows['lien'].'</td>';
-                            echo '<td>'.$sp.$rows['pssw'].'</td>';
-                             echo '</tr>';
-                             }
-                       
-                       echo '</tbody>';
-                       echo '</table>';
+		       echo '<div class="table-title">';
+                echo '<h3>Your Passwords</h3>';
+                 echo '</div>';
+                  echo '<table class="table-fill">';
+                   echo '<thead>';
+			        echo '<tr>';
+			         echo '<th class="text-left">Username</th>';
+			         echo '<th class="text-left">Link</th>';
+			         echo '<th class="text-left">Password</th>';
+			        echo '</tr>';
+			       echo '</thead>';
+			       echo '<tbody class="table-hover">';
+                    
+          while ($rows = mysqli_fetch_array($result)){
+          	         echo '<tr>';
+                   echo '<td>'.$sp.$rows['username'].'</td>'; 
+                   echo '<td>'.$sp.$rows['lien'].'</td>';
+                   echo '<td>'.$sp.$rows['pssw'].'</td>';
+                     echo '</tr>';
+                     } 
+                     echo '<form name="form1" method="post" '.$_SERVER['PHP_SELF'].'>';
+                     echo '<td><label><input name="usrn" type="text" id="usn"/></label></td>';
+                      echo '<td><label><input name="lnk" type="text" id="ln"/></label></td>';
+                       echo '<td><label><input name="pssd" type="password" id="pw"/></label></td>';
+                      
+               echo '</tbody>';
+               echo '</table>';
 
  
          ?>
 
-  <button class="buttADD">
+  <button class="buttADD" name="ajouter" type="submit">
   	<span>
   		Add
   	</span>
@@ -122,11 +126,20 @@
   	</span>
   </button>
 
-  <button class="buttDEL">
+  <button class="buttDEL" name="supprimer" type="submit" >
   	<span>
   		Delete
   	</span>
   </button>
-		
+
+     </form>
+
+	<?php 
+
+	   require'button_process_Mysql.php'; 
+	   include('errors.php');
+
+	?>
+
 </body>
 </html>

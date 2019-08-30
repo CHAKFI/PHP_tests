@@ -50,7 +50,7 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 1px;
-  margin-top: -280px;
+ 
 }
 
 .butt span {
@@ -78,33 +78,6 @@
   right: 0;
 }
 
-#txt {
-  font-family: Century Gothic;
-   font-size: 18px;
-    margin-left: 30%;
-    margin-top: 4px;
-     color: rgb(10, 0, 60);
-      width: 40%;
-       background: rgba(1, 254, 18, 0.5);
-        padding: 1px;
-         border-radius: 9px;
-}
-
-#txt2 {
-  font-family: Century Gothic;
-   font-size: 18px;
-    margin-top: 166px;
-     color:rgb(10, 0, 60);
-      background-color: rgba(10, 0, 60, 0.2);
-       padding: 15px;
-        padding-top: 10px;
-}
-
-#lien {
-  font-family: Century Gothic;
-  color: blue;
-
-}
 
 #brr {
   font-family: Century Gothic;
@@ -122,6 +95,16 @@
 #usr{
   color: green;
 }
+
+#usn, #ln, #pw {
+  height: 100%;
+   width: 98%;
+    font-family: Century Gothic ;
+     font-size: 14px;
+}
+
+
+
 
 </style>
   

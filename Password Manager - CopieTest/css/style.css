@@ -19,10 +19,10 @@ div.table-title {
    color: rgb(10, 0, 60);
    font-size: 18px;
    font-weight: 600;
-   font-style:normal;
+   font-style: normal;
    font-family: Century Gothic;
    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-   text-transform:uppercase;
+   text-transform: uppercase;
 }
 
 
@@ -42,7 +42,7 @@ div.table-title {
 }
  
 th {
-  color:#D5DDE5;;
+  color:#D5DDE5;
   background:#1b1e24;
   border-bottom:3px solid #9ea7af;
   border-right: 1px solid #343a45;
@@ -107,7 +107,7 @@ td {
   padding: 1px;
   text-align: left;
   vertical-align: middle;
-  font-weight: 700;
+  font-weight: 200;
   font-size: 14px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
   border-right: 1px solid #C1C3D1;
@@ -147,13 +147,13 @@ td.text-right {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px;
-  width: 150px;
+  width: 110px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 15px;
-  margin-left: 29%;
+  margin: 12px;
+  margin-left: 33%;
 }
 
 .buttADD span {
@@ -187,13 +187,13 @@ td.text-right {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px;
-  width: 150px;
+  width: 110px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 15px;
-  margin-left: 2%;
+  margin-left: 3%;
 }
 
 .buttDEL span {
@@ -227,13 +227,13 @@ td.text-right {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px;
-  width: 150px;
+  width: 110px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 15px;
-  margin-left:4%;
+  margin-left:3%;
 }
 
 .buttMOD span {
@@ -261,4 +261,12 @@ td.text-right {
   right: 0;
 }
 
-
+.error {
+    font-family: 'Century Gothic','Futura',san-serif;    
+    width: 70%; 
+    margin: 0px auto; 
+    color: rgb(16, 13, 42,); 
+    background: rgba(171, 28, 28, 0.6);
+    border-radius: 15px; 
+    text-align: center;
+    }
